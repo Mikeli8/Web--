@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Обсуждение темы</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="blog" class="blog cont-100vh w3-white">
+        <h1>В чем преимущества дистанционного обучения?</h1>
+        <div id="post">
+         <P> 1. Возможность обучаться из любой точки планеты
+<P> 2. Самостоятельная организация учебного процесса
+<P> 3. Отсутствие временных рамок: вы сами выбираете время занятий
+<P> 4. Диплом государственного образца
+<P> 5. Возможность удобного совмещения учебы с работой
+        </div>
+        <comment-div></comment-div>
+      </div>
+    </div>
+
+    <template id="commentTemplate">
+      <style>
+        .comment {
+          padding-top: 1px;
+        }
+        .dive-comments {
+          margin-left: 40px;
+          margin-top: 10px;
+        }
+      </style>
+      <div class="comment">
+        <p><slot></slot></p>
+        <button class="like-btn">
+          Одобряю <span class="like-count">0</span>
+        </button>
+        <button class="reply-btn">Обсудить</button>
+        <button class="delete-btn">Удалить</button>
+        <div class="dive-comments"></div>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
